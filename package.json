@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "project",
+      "lib"
+    ]
+  },
+  "packageManager": "yarn@4.1.1"
+}

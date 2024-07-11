@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "monorepo": true,
+  "sourceRoot": "src",
+  "entryFile": "project/src/main",
+  "compilerOptions": {
+    "builder": {
+      "type": "swc",
+      "options": {
+        "outDir": "dist/project/src"
+      }
+    }
+  },
+  "projects": {
+    "lib": {
+      "type": "library",
+      "root": "../lib",
+      "entryFile": "index",
+      "sourceRoot": "../lib/src",
+      "compilerOptions": {
+        "builder": {
+          "type": "swc",
+          "options": {
+            "outDir": "dist/lib/src"
+          }
+        },
+        "tsConfigPath": "../lib/tsconfig.json"
+      }
+    }
+  }
+}
